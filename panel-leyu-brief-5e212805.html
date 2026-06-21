@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · leyu 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #fce9d8 0%, #f7d9c4 40%, #f0cbb2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+            color: #2e2822;
+        }
+
+        .card {
+            max-width: 780px;
+            width: 100%;
+            background: rgba(255, 251, 245, 0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 42px;
+            padding: 2.8rem 2.8rem 3rem;
+            box-shadow: 0 20px 40px -10px rgba(140, 90, 60, 0.25), 0 8px 20px rgba(180, 120, 80, 0.12);
+            transition: all 0.2s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e7d0bc;
+            color: #4e382a;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #3b2d24;
+            margin-bottom: 0.65rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6d5a4b;
+            margin-bottom: 2rem;
+            border-left: 4px solid #dbb99a;
+            padding-left: 1rem;
+            background: rgba(235, 214, 192, 0.2);
+            border-radius: 0 8px 8px 0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 2rem 0 0.8rem 0;
+            color: #3d2d23;
+            letter-spacing: -0.2px;
+            border-bottom: 2px solid #e8d5c2;
+            padding-bottom: 0.4rem;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: #f7eee6;
+            padding: 1.2rem 1rem;
+            border-radius: 24px;
+            border: 1px solid #e5d3c2;
+            transition: 0.1s ease;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1rem;
+            color: #4f3b2e;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #6a5545;
+        }
+
+        .highlight-link {
+            display: inline-block;
+            background: #dbb99a;
+            color: #2b1f19;
+            padding: 0.35rem 1rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border: 1px solid #cbae91;
+            transition: background 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 6px rgba(160, 115, 80, 0.12);
+            margin: 0 0.1rem;
+        }
+
+        .highlight-link:hover {
+            background: #cfb095;
+            box-shadow: 0 4px 10px rgba(140, 95, 65, 0.18);
+        }
+
+        .faq-item {
+            background: #f6ede4;
+            border-radius: 18px;
+            padding: 0.8rem 1.2rem;
+            margin: 0.6rem 0;
+            border-left: 5px solid #cfb293;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #3d2d23;
+            font-size: 0.98rem;
+        }
+
+        .faq-item .a {
+            color: #564434;
+            font-size: 0.94rem;
+            margin-top: 0.15rem;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #7c6a5b;
+            border-top: 1px dashed #dcc9b9;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footnote a {
+            color: #4f3b2e;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #d6bbaa;
+            font-weight: 500;
+        }
+
+        .footnote a:hover {
+            color: #1f1611;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 2rem 1.2rem;
+                border-radius: 32px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .footnote {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">✱ 简明指南</div>
+        <h1>leyu · 产品说明</h1>
+        <div class="subhead">一次关于功能与使用的认真整理，不绕弯，不夸大</div>
+
+        <p>
+            <strong>leyu</strong> 是一个面向日常需求整合的工具型平台，提供清晰的信息组织方式与轻量的操作界面。它的设计初衷是让常用功能更容易被找到、被使用，同时保持页面的整洁与响应速度。无论你之前是否接触过类似服务，下面这份摘要都能帮你快速建立认知。
+        </p>
+
+        <h2>▸ 亮点速览</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>统一面板</strong>
+                <span>将常用入口集中收纳，减少来回跳转的琐碎感。</span>
+            </div>
+            <div class="feature-item">
+                <strong>低调响应</strong>
+                <span>界面适配主流设备，操作反馈直接，不拖沓。</span>
+            </div>
+            <div class="feature-item">
+                <strong>信息分区</strong>
+                <span>功能区块按使用场景划分，视觉层次明确，减少寻找成本。</span>
+            </div>
+            <div class="feature-item">
+                <strong>持续优化</strong>
+                <span>团队根据反馈定期微调，保持界面与逻辑的合理演进。</span>
+            </div>
+        </div>
+
+        <h2>▸ 使用建议</h2>
+        <p>
+            如果你是初次接触，建议先花几分钟浏览整体布局，熟悉各个区块的定位。日常使用时，将最常用的功能固定在快捷区域可以节省不少时间。对于不熟悉的操作，可以留意页面上的辅助说明或标签提示——它们通常能提供足够的信息。另外，善用浏览器的书签或历史功能也能提升效率。
+        </p>
+        <p>
+            如果你遇到任何显示异常或功能无响应的情况，请先检查网络连接及浏览器版本。大部分问题可以通过刷新或更换现代浏览器解决。保持页面整洁、避免同时开太多标签页，也有助于获得更流畅的体验。
+        </p>
+
+        <h2>▸ 常见疑问摘要</h2>
+        <div class="faq-item">
+            <div class="q">Q: 是否需要注册才能使用全部功能？</div>
+            <div class="a">部分基础功能可直接浏览，完整功能建议注册后使用。注册流程简洁，不收集多余信息。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 在移动端上体验如何？</div>
+            <div class="a">主界面已做响应式适配，在手机和平板上均可正常操作。个别密集区域会重新排列以保证触摸友好。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q: 数据或隐私方面有什么需要注意的？</div>
+            <div class="a">请像对待任何线上工具一样保持合理注意。建议定期清理本地缓存，避免在公共设备上保存登录状态。</div>
+        </div>
+
+        <div class="footnote">
+            <span>更多细节可参考平台内的帮助说明。</span>
+            <span>
+                前往 <a href="https://panel--leyu.com">leyu</a> 进一步了解。
+            </span>
+        </div>
+
+        <!-- 隐形种子标记（仅用于变化，不显示） -->
+        <!-- seed: ba8cb502b44e01cf -->
+    </div>
+</body>
+</html>
